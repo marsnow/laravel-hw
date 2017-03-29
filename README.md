@@ -15,6 +15,17 @@ $ docker build --rm -t laravel-hw .
 $ docker-compose up -d
 $ composer install
 ```
+## 部署設定
+使用 Heroku 免費!!
+- 新增 Procfile（指定 DocumentRoot 位置）
+``` Apache
+web: vendor/bin/heroku-php-apache2 public/
+```
+- 新增 APP_KEY（因為 Git 不會追蹤 .env）
+``` PHP
+'key' => env('APP_KEY', 'SomeRandomStringWith32Characters'),
+```
+
 ## 作業內容
 ### 功能要求
 
