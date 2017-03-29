@@ -21,7 +21,7 @@ $ composer install
 ``` Apache
 web: vendor/bin/heroku-php-apache2 public/
 ```
-- 新增 APP_KEY（因為 Git 不會追蹤 .env）
+- 新增 APP_KEY（因為 Git 不會追蹤 .env，位置：config/app.php）
 ``` PHP
 'key' => env('APP_KEY', 'SomeRandomStringWith32Characters'),
 ```
