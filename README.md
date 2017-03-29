@@ -5,5 +5,7 @@
 ``` bash
 $ docker build --rm -t laravel-hw .
 $ docker-compose up -d
-$ 
+$ docker exec -it laravel-hw bash
+	# cd /var/www/laravel
+	# composer install
 ```
